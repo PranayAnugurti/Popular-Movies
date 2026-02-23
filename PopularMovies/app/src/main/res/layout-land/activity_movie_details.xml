@@ -6,12 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      tools:context="com.example.pranaykumar.popularmovies.MovieDetailsActivity"
-      >
+      tools:context="com.example.pranaykumar.popularmovies.MovieDetailsActivity">
 
       <ImageView
         android:id="@+id/poster"
@@ -117,21 +116,30 @@
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/GuideLine1"/>
-      <com.github.paolorotolo.expandableheightlistview.ExpandableHeightGridView
+      <com.example.pranaykumar.popularmovies.ExpandableGridView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:id="@+id/videosList"
         app:layout_constraintLeft_toLeftOf="@+id/trailerLabel"
         app:layout_constraintTop_toBottomOf="@+id/trailerLabel">
-      </com.github.paolorotolo.expandableheightlistview.ExpandableHeightGridView>
+      </com.example.pranaykumar.popularmovies.ExpandableGridView>
+      <Button
+        android:id="@+id/view_more_videos_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show More Trailers"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videosList"/>
       <ImageView
         android:id="@+id/guideLine3"
         android:layout_width="0dp"
         android:layout_height="2dp"
         app:layout_constraintLeft_toLeftOf="@+id/videosList"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/videosList"
+        app:layout_constraintTop_toBottomOf="@+id/view_more_videos_button"
         app:srcCompat="@android:color/darker_gray"/>
       <TextView
         android:id="@+id/reviewsLabel"
@@ -144,17 +152,17 @@
         app:layout_constraintLeft_toLeftOf="@+id/guideLine3"
         app:layout_constraintTop_toBottomOf="@+id/guideLine3"/>
 
-      <TextView
-        android:id="@+id/text_view_reviews"
-        android:layout_width="wrap_content"
+      <LinearLayout
+        android:id="@+id/reviews_container"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="@dimen/reviews_textSize"
-        android:text="No Reviews avialable"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
         app:layout_constraintTop_toBottomOf="@+id/reviewsLabel"
-        app:layout_constraintLeft_toLeftOf="@+id/reviewsLabel"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
   </ScrollView>
 
 </layout>

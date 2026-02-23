@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.example.pranaykumar.popularmovies">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -12,38 +11,17 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-<<<<<<< HEAD
-=======
-    <activity android:name=".MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.LAUNCHER"/>
-      </intent-filter>
-      <meta-data
-        android:name="android.app.searchable"
-        android:resource="@xml/searchable"/>
-    </activity>
->>>>>>> 00702b6892dace594892ae3fbd39764b7cb13db0
-    <activity android:name=".MovieDetailsActivity">
-      android:parentActivityName="com.example.pranaykumar.popularmovies.MainActivity" >
-      android:launchMode="singleTop"
-      <!-- Parent activity meta-data to support 4.0 and lower -->
+    <activity
+      android:name=".MovieDetailsActivity"
+      android:exported="false"
+      android:parentActivityName=".FrontActivity">
       <meta-data
         android:name="android.support.PARENT_ACTIVITY"
-<<<<<<< HEAD
         android:value="com.example.pranaykumar.popularmovies.FrontActivity"/>
-=======
-        android:value="com.example.pranaykumar.popularmovies.MainActivity"/>
+    </activity>
 
-    </activity>
-    <activity android:name=".FavouriteMoviesActivity">
->>>>>>> 00702b6892dace594892ae3fbd39764b7cb13db0
-    </activity>
-    <activity
-      android:configChanges="keyboardHidden|orientation|screenSize"
-      android:name="com.google.android.youtube.api.StandalonePlayerActivity"/>
-    //Registering content provider
+    <!-- Content Provider for favourite movies -->
     <provider
       android:authorities="com.example.pranaykumar.popularmovies"
       android:exported="false"
@@ -51,24 +29,27 @@
 
     <activity
       android:name=".FrontActivity"
+      android:exported="true"
       android:theme="@style/AppTheme.NoActionBar">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
-
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
-
       <meta-data
         android:name="android.app.searchable"
         android:resource="@xml/searchable"/>
     </activity>
+
     <activity
       android:label="@string/title_activity_favourite_movies_nav"
       android:name=".FavouriteMoviesNavActivity"
+      android:exported="false"
       android:theme="@style/AppTheme.NoActionBar">
     </activity>
-    <activity android:name=".AboutMe">
+
+    <activity android:name=".AboutMe" android:exported="false">
     </activity>
+
   </application>
 
 </manifest>

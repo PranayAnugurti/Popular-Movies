@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_height="wrap_content"
   android:layout_width="match_parent">
-<FrameLayout
-  android:id="@+id/layout"
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content">
-  <ImageView
-    android:id="@+id/poster"
+  <FrameLayout
+    android:id="@+id/layout"
     android:layout_width="match_parent"
-    android:layout_height="260dp"
-    android:scaleType="fitXY"
-    android:src="@drawable/download"
-    android:adjustViewBounds="true"
-    android:transitionName="albumArt"
-    />
-  <TextView
-    android:id="@+id/movieNameTextView"
-    android:layout_width="match_parent"
-    android:layout_height="40dp"
-    android:layout_gravity="center_horizontal|bottom"
-    android:background="#9f000000"
-    android:textColor="#ffffffff"
-    android:elevation="2dp"
-    android:text="Golden Gate" />
-</FrameLayout>
-</android.support.v7.widget.CardView>
+    android:layout_height="wrap_content">
+    <ImageView
+      android:id="@+id/poster"
+      android:layout_width="match_parent"
+      android:layout_height="260dp"
+      android:scaleType="fitXY"
+      android:src="@drawable/download"
+      android:adjustViewBounds="true"
+      android:transitionName="albumArt"
+      />
+    <TextView
+      android:id="@+id/movieNameTextView"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:layout_gravity="center_horizontal|bottom"
+      android:background="#9f000000"
+      android:textColor="#ffffffff"
+      android:elevation="2dp"
+      android:text="Golden Gate" />
+  </FrameLayout>
+</androidx.cardview.widget.CardView>

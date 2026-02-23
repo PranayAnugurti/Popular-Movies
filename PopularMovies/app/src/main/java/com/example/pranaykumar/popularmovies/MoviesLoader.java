@@ -1,11 +1,12 @@
 package com.example.pranaykumar.popularmovies;
 
-import android.content.AsyncTaskLoader;
 import android.content.Context;
+import androidx.loader.content.AsyncTaskLoader;
 import java.util.ArrayList;
 
 /**
  * Created by PRANAYKUMAR on 23-05-2017.
+ * Updated to use AndroidX AsyncTaskLoader.
  */
 
 public class MoviesLoader extends AsyncTaskLoader<ArrayList<Movie>> {
